@@ -1841,5 +1841,20 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px;
-  }
+  }.resume-wrap {
+  border-left: 4px solid #f96d00;
+  transition: all 0.3s ease;
+}
+.resume-wrap:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.resume-wrap .date {
+  font-weight: 600;
+  color: #f96d00;
+}
+#qualification-section p {
+  font-weight: bold;
+}
+
 }
