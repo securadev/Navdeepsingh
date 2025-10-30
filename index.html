@@ -27,6 +27,55 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+<style>
+    /* Image hover zoom */
+    .portfolio-entry .img {
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.5s ease;
+  width: 100%;
+    aspect-ratio: 16 / 9;      /* keep it landscape; change to 4/3, 3/2 etc if you prefer */
+  min-height: 200px;         /* ensures small screens still have enough height */
+  max-height: 290px;         
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+    .portfolio-entry:hover .img {
+       transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    /* Button glow effect */
+    .custom-btn {
+      display: inline-block;
+      background: #007bff;
+      color: #fff;
+      padding: 10px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 0px rgba(0, 123, 255, 0.6);
+    }
+    .custom-btn:hover {
+      background: #0056b3;
+      box-shadow: 0 0 15px rgba(0, 123, 255, 0.7);
+      transform: translateY(-2px);
+    }
+
+    /* Smooth fade-in animation */
+    .ftco-animate {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s ease-out;
+    }
+    .ftco-animate.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+
   </head>
   <body>
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -78,7 +127,7 @@
 			      	<div class="overlay"></div>
 			        <div class="container-fluid p-0">
 			          <div class="row d-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
-			          	<div class="one-third img js-fullheight" style="background-image:url(images/nav91.jpg);">
+			          	<div class="one-third img js-fullheight" style="background-image:url(images/nav9.jpg);">
 			          		<div class="overlay"></div>
 			          	</div>
 			        	</div>
@@ -120,8 +169,8 @@
             <div class="media block-6 services d-block">
               <div class="icon"><span class="flaticon-layers"></span></div>
               <div class="media-body">
-                <h3 class="heading mb-3">Tools</h3>
-                <p>Turning ideas into action through seamless communication — connecting clients, teams, and innovation on one page.</p>
+                <h3 class="heading mb-3">Web Design</h3>
+                <p>Passionate about creating visually appealing, user-centered websites that blend design aesthetics with functionality. I focus on responsive layouts, intuitive navigation, and engaging digital experiences that leave a lasting impression..</p>
               </div>
             </div>      
           </div>
@@ -139,7 +188,7 @@
               <div class="icon"><span class="flaticon-idea"></span></div>
               <div class="media-body">
                 <h3 class="heading mb-3">Data Base management and development</h3>
-                <p>Adept at streamlining development workflows, mitigating system vulnerabilities, and ensuring seamless project execution with secure and efficient solutions.</p>
+                <p>Skilled in Database Management and Development, focusing on designing, optimizing, and maintaining efficient data systems. Experienced in working with SQL and NoSQL databases to ensure reliability, scalability, and secure data handling for web and enterprise applications.</p>
               </div>
             </div>      
           </div>
@@ -158,167 +207,76 @@
     </section>
 
 
-    <section class="ftco-section ftco-portfolio">
-    	<div class="container-fluid">
-    		<div class="row justify-content-center pb-3">
-          <div class="col-md-12 mb-5 heading-section text-center ftco-animate">
-            <h2 class="mb-5">Projects &amp; <span>Devlopment</span></h2>
-          </div>
+   <section class="ftco-section ftco-portfolio">
+  
+
+  <script>
+    // Fade-in on scroll effect
+    document.addEventListener("DOMContentLoaded", function () {
+      const animElements = document.querySelectorAll(".ftco-animate");
+
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("appear");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      animElements.forEach(el => observer.observe(el));
+    });
+  </script>
+
+  <div class="container-fluid">
+    <div class="row justify-content-center pb-3">
+      <div class="col-md-12 mb-5 heading-section text-center ftco-animate">
+        <h2 class="mb-5">Projects &amp; <span>Development</span></h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ FIRST PROJECT — Image Left, Text Right -->
+  <div class="container-fluid px-0 portfolio-entry ftco-animate">
+    <div class="row no-gutters d-md-flex align-items-center">
+      <div class="col-md-6 img js-fullheight" style="background-image: url('images/nm1.jpg');"></div>
+      <div class="col-md-6 d-flex align-items-center">
+        <div class="desc p-5">
+          <span class="subheading">1st project {12/06/2019}</span>
+          <h2 class="mb-4"><a href="single.html">Project Nume</a></h2>
+          <p>NUme Professional Salon — where beauty meets expertise. We specialize in premium makeup, skincare, and hair treatments, offering personalized services that bring out your best look with a touch of luxury and care.</p>
+          <p><a href="https://nume.securadev.com/" class="custom-btn">ViewPortfolio</a></p>
         </div>
-    	</div>
+      </div>
+    </div>
+  </div>
 
-    	<div class="container">
-    		<div class="row no-gutters">
-	  			<div class="col-md-12 portfolio-wrap">
-	  				<div class="row no-gutters align-items-center">
-	  					<div class="col-md-5 img js-fullheight" style="background-image: url(images/work-1.jpg);">
-	  						
-	  					</div>
-	  					<div class="col-md-7">
-	  						<div class="text pt-5 pl-0 pl-lg-5 pl-md-4 ftco-animate">
-	  							<div class="px-4 px-lg-4">
-	  								<div class="desc">
-		  								<div class="top">
-			  								<span class="subheading">Web Design {12/06/2019}</span>
-				  							<h2 class="mb-4"><a href="work.html">Midway</a></h2>
-			  							</div>
-			  							<div class="absolute">
-				  							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-				  							<p><a href="#" class="custom-btn">View Portfolio</a></p>
-			  							</div>
-		  							</div>
-	  							</div>
-	  						</div>
-	  					</div>
-	  				</div>
-	  			</div>
-	  		</div>
-    	</div>
+  <!-- ✅ SECOND PROJECT — Image Right, Text Left -->
+  <div class="container-fluid px-0 portfolio-entry ftco-animate">
+    <div class="row no-gutters d-md-flex align-items-center flex-md-row-reverse">
+      <div class="col-md-6 img js-fullheight" style="background-image: url('images/sec.jpg');"></div>
+      <div class="col-md-6 d-flex align-items-center">
+        <div class="desc p-5">
+          <span class="subheading">Own creation {12/06/2019}</span>
+          <h2 class="mb-4"><a href="work.html">Project Securadev</a></h2>
+          <p>We build modern websites that perform at their best while offering top-tier security features to give you and your customers peace of mind.</p>
+          <p><a href="#" class="custom-btn">ViewPortfolio</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    	<div class="container-fluid px-0 portfolio-entry">
-    		<div class="row no-gutters d-xl-flex justify-content-end text-wrapper">
-					<div class="one-half img js-fullheight" style="background-image: url('images/nav3.jpg');"></div>
-					<div class="one-half half-text d-flex justify-content-end align-items-center ftco-animate">
-						<div class="text align-items-center d-flex">
-              <div class="desc pt-5 pl-4 pr-4 pt-lg-0 pl-lg-5 pl-xl-0 pr-xl-0">
-								<div class="top">
-  								<span class="subheading">1st project{12/06/2019}</span>
-	  							<h2 class="mb-4"><a href="home">Project Nume</a></h2>
-  							</div>
-  							<div class="absolute">
-	  							<p>NUme Professional Salon — where beauty meets expertise. We specialize in premium makeup, skincare, and hair treatments, offering personalized services that bring out your best look with a touch of luxury and care.</p>
-	  							<h2 class="mb-4"><a href="https://nume.securadev.com/">View Portfolio</a></h2>
-  							</div>
-							</div>
-            </div>
-					</div>
-    		</div>
-    	</div>
-
-    	<div class="container-fluid px-0 portfolio-entry">
-    		<div class="row no-gutters d-md-flex justify-content-start text-wrapper">
-					<div class="one-half img js-fullheight" style="background-image: url('images/nav4.jpg');"></div>
-					<div class="one-half half-text d-flex justify-content-end align-items-center ftco-animate">
-						<div class="text-2 align-items-start d-flex">
-              <div class="desc pt-5 pr-4 pl-4 pt-lg-0 pr-lg-5 pr-xl-0 pl-xl-0">
-								<div class="top">
-  								<span class="subheading">own creation {12/06/2019}</span>
-	  							<h2 class="mb-4"><a href="work.html">Project Securadev
-  							</div>
-  							<div class="absolute">
-	  							<p>We build modern websites that perform at their best while offering top-tier security features to give you and your customers peace of mind</p>
-	  							<p><a href="#" class="custom-btn">View Portfolio</a></p>
-  							</div>
-							</div>
-            </div>
-					</div>
-    		</div>
-    	</div>
-
-    	<div class="container">
-    		<div class="row no-gutters">
-	  			<div class="col-md-12 portfolio-wrap">
-	  				<div class="row no-gutters align-items-center">
-	  					<div class="col-md-5 order-md-last img js-fullheight" style="background-image: url(images/work-4.jpg);">
-	  						
-	  					</div>
-	  					<div class="col-md-7">
-	  						<div class="text pt-5 pr-md-5 ftco-animate">
-	  							<div class="px-4 px-lg-4">
-	  								<div class="desc">
-		  								<div class="top">
-			  								<span class="subheading">Application {12/06/2019}</span>
-				  							<h2 class="mb-4"><a href="work.html">Topless</a></h2>
-			  							</div>
-			  							<div class="absolute">
-				  							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-				  							<p><a href="#" class="custom-btn">View Portfolio</a></p>
-			  							</div>
-		  							</div>
-	  							</div>
-	  						</div>
-	  					</div>
-	  				</div>
-	  			</div>
-	  		</div>
-    	</div>
-
-    	<div class="container-fluid px-0 portfolio-entry">
-    		<div class="row no-gutters d-md-flex justify-content-end text-wrapper">
-					<div class="one-half img js-fullheight" style="background-image: url('images/work-5.jpg');"></div>
-					<div class="one-half half-text d-flex justify-content-end align-items-center ftco-animate">
-						<div class="text align-items-center d-flex">
-              <div class="desc pt-5 pl-5 pr-5 pt-lg-0 pl-lg-5 pl-xl-0 pr-xl-0">
-								<div class="top">
-  								<span class="subheading">Writing {12/06/2019}</span>
-	  							<h2 class="mb-4"><a href="work.html">Fashion Style</a></h2>
-  							</div>
-  							<div class="absolute">
-	  							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-	  							<p><a href="#" class="custom-btn">View Portfolio</a></p>
-  							</div>
-							</div>
-            </div>
-					</div>
-    		</div>
-    	</div>
-
-    	<div class="container">
-    		<div class="row no-gutters">
-	  			<div class="col-md-12 portfolio-wrap">
-	  				<div class="row no-gutters align-items-center">
-	  					<div class="col-md-5 img js-fullheight" style="background-image: url(images/work-6.jpg);">
-	  						
-	  					</div>
-	  					<div class="col-md-7">
-	  						<div class="text pt-5 pl-md-5 pl-md-4 ftco-animate">
-	  							<div class="px-4 px-lg-4">
-	  								<div class="desc">
-		  								<div class="top">
-			  								<span class="subheading">Illustration {12/06/2019}</span>
-				  							<h2 class="mb-4"><a href="work.html">Prickly</a></h2>
-			  							</div>
-			  							<div class="absolute">
-				  							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-				  							<p><a href="#" class="custom-btn">View Portfolio</a></p>
-			  							</div>
-		  							</div>
-	  							</div>
-	  						</div>
-	  					</div>
-	  				</div>
-	  			</div>
-	  		</div>
-    	</div>
-
-    </section>
 
     <footer class="ftco-footer ftco-section">
 		<section class="ftco-section bg-light" id="qualification-section">
   <div class="container">
     <div class="row justify-content-center pb-4">
       <div class="col-md-12 heading-section text-center ftco-animate">
-        <h2 class="mb-2">Academic <span>Qualifications</span></h2>
+        <h1 class="mb-2">Academic <span>Qualifications</span></h1>
         <p>My academic path blends technology, management, and global business — building the foundation for effective, innovative, and strategic problem-solving.</p>
       </div>
     </div>
@@ -361,7 +319,7 @@
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">About Us</h2>
-              <p>In the realm of full-stack innovation, I bring ideas to life through the MEAN stack — blending creativity, performance, and precision. Every line of code tells a story, every project reflects a vision — crafted to make the web a smarter, smoother place.</p>
+              <p>I craft innovative web solutions with the MEAN stack — where creativity meets precision and every project transforms ideas into seamless digital experiences.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
