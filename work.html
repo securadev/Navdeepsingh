@@ -27,6 +27,85 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+/* ========== Image Styling ========== */
+.project-img {
+  background-size: cover;
+  background-position: center;
+  /* height: 100%; */
+  /* min-height: 350px; */
+  width: 100%;
+    aspect-ratio: 16 / 9;      /* keep it landscape; change to 4/3, 3/2 etc if you prefer */
+  min-height: 200px;         /* ensures small screens still have enough height */
+  max-height: 290px;         
+  border-radius: 20px;
+    /* overflow: hidden; */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.project-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* ========== Text Section ========== */
+.text {
+  padding: 30px;
+}
+
+.text .subheading {
+  color: #999;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.text h2 a {
+  color: #222;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.text h2 a:hover {
+  color: #007bff;
+}
+
+/* ========== Button Styling ========== */
+.custom-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.custom-btn:hover {
+  background: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* ========== Fade-in Animation ========== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: Add slight delay between project animations */
+.portfolio-item:nth-child(1) .fade-in { animation-delay: 0.2s; }
+.portfolio-item:nth-child(2) .fade-in { animation-delay: 0.4s; }
+</style>
   </head>
   <body>
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -38,8 +117,9 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
 	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	        	<li class="nav-item active"><a href="work.html" class="nav-link">Work</a></li>
+	        	<li class="nav-item"><a href="work.html" class="nav-link">Work</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
@@ -60,162 +140,49 @@
     </section>
 
     <section class="ftco-section ftco-portfolio">
-    	<div class="container">
-    		<div class="row">
-	  			<div class="col-md-6 portfolio-wrap ftco-animate">
-	  				<div class="row align-items-center">
-	  					<div class="col-md-12">
-		  					<div class="img js-fullheight" style="background-image: url(images/work-1.jpg);">
-		  						
-		  					</div>
-	  					</div>
-	  					<div class="col-md-12">
-	  						<div class="text">
-	  							<div class="px-0 pt-5">
-	  								<div class="desc">
-		  								<div class="top top-relative">
-			  								<span class="subheading">Web Design {12/06/2019}</span>
-				  							<h2 class="mb-4"><a href="single.html">Midway</a></h2>
-			  							</div>
-			  							<div class="absolute relative">
-				  							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-				  							<p><a href="single.html" class="custom-btn">View Portfolio</a></p>
-			  							</div>
-		  							</div>
-	  							</div>
-	  						</div>
-	  					</div>
-	  				</div>
-	  			</div>
-	  			<div class="col-md-6 portfolio-wrap ftco-animate">
-	  				<div class="row align-items-center">
-	  					<div class="col-md-12">
-		  					<div class="img js-fullheight" style="background-image: url(images/nav3.jpg);">
-		  						
-		  					</div>
-	  					</div>
-	  					<div class="col-md-12">
-	  						<div class="text">
-	  							<div class="px-0 pt-5">
-	  								<div class="desc">
-		  								<div class="top top-relative">
-			  								<span class="subheading">1st project {12/06/2019}</span>
-				  							<h2 class="mb-4"><a href="single.html"> project Nume </a></h2>
-			  							</div>
-			  							<div class="absolute relative">
-				  							<p>NUme Professional Salon — where beauty meets expertise. We specialize in premium makeup, skincare, and hair treatments, offering personalized services that bring out your best look with a touch of luxury and care.</p>
-				  							<h2 class="mb-4"><a href="https://nume.securadev.com/" class="custom-btn">Dive in</a></h2>
-			  							</div>
-		  							</div>
-	  							</div>
-	  						</div>
-	  					</div>
-	  				</div>
-	  			</div>
-	  			<div class="col-md-6 portfolio-wrap ftco-animate">
-	  				<div class="row align-items-center">
-	  					<div class="col-md-12">
-		  					<div class="img js-fullheight" style="background-image: url(images/nav4.jpg);">
-		  						
-		  					</div>
-	  					</div>
-	  					<div class="col-md-12">
-	  						<div class="text">
-	  							<div class="px-0 pt-5">
-	  								<div class="desc">
-		  								<div class="top top-relative">
-			  								<span class="subheading">Secura{12/06/2019}</span>
-				  							<h2 class="mb-4"><a href="single.html">Project Securadev</a></h2>
-			  							</div>
-			  							<div class="absolute relative">
-				  							<p>At SECURADEV, we secure the web — protecting data, defending networks, and empowering businesses with cutting-edge cybersecurity solutions.</p>
-				  							<h2 class="mb-4"><a href="https://www.securadev.com/" class="custom-btn">Dive in</a></h2>
-			  							</div>
-		  							</div>
-	  							</div>
-	  						</div>
-	  					</div>
-	  				</div>
-	  			</div>
-	  			<div class="col-md-6 portfolio-wrap ftco-animate">
-	  				<div class="row align-items-center">
-	  					<div class="col-md-12">
-		  					<div class="img js-fullheight" style="background-image: url(images/work-4.jpg);">
-		  						
-		  					</div>
-	  					</div>
-	  					<div class="col-md-12">
-	  						<div class="text">
-	  							<div class="px-0 pt-5">
-	  								<div class="desc">
-		  								<div class="top top-relative">
-			  								<span class="subheading">Application {12/06/2019}</span>
-				  							<h2 class="mb-4"><a href="single.html">Topless</a></h2>
-			  							</div>
-			  							<div class="absolute relative">
-				  							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-				  							<p><a href="single.html" class="custom-btn">View Portfolio</a></p>
-			  							</div>
-		  							</div>
-	  							</div>
-	  						</div>
-	  					</div>
-	  				</div>
-	  			</div>
-	  			<div class="col-md-6 portfolio-wrap ftco-animate">
-	  				<div class="row align-items-center">
-	  					<div class="col-md-12">
-		  					<div class="img js-fullheight" style="background-image: url(images/work-5.jpg);">
-		  						
-		  					</div>
-	  					</div>
-	  					<div class="col-md-12">
-	  						<div class="text">
-	  							<div class="px-0 pt-5">
-	  								<div class="desc">
-		  								<div class="top top-relative">
-			  								<span class="subheading">Writing {12/06/2019}</span>
-				  							<h2 class="mb-4"><a href="single.html">Fashion Style</a></h2>
-			  							</div>
-			  							<div class="absolute relative">
-				  							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-				  							<p><a href="single.html" class="custom-btn">View Portfolio</a></p>
-			  							</div>
-		  							</div>
-	  							</div>
-	  						</div>
-	  					</div>
-	  				</div>
-	  			</div>
-	  			<div class="col-md-6 portfolio-wrap ftco-animate">
-	  				<div class="row align-items-center">
-	  					<div class="col-md-12">
-		  					<div class="img js-fullheight" style="background-image: url(images/work-6.jpg);">
-		  						
-		  					</div>
-	  					</div>
-	  					<div class="col-md-12">
-	  						<div class="text">
-	  							<div class="px-0 pt-5">
-	  								<div class="desc">
-		  								<div class="top top-relative">
-			  								<span class="subheading">Illustration {12/06/2019}</span>
-				  							<h2 class="mb-4"><a href="single.html">Prickly</a></h2>
-			  							</div>
-			  							<div class="absolute relative">
-				  							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-				  							<p><a href="single.html" class="custom-btn">View Portfolio</a></p>
-			  							</div>
-		  							</div>
-	  							</div>
-	  						</div>
-	  					</div>
-	  				</div>
-	  			</div>
-	  		</div>
-    	</div>
+  <div class="container">
 
-    </section>
+    <!-- FIRST PROJECT (Image Left, Text Right) -->
+    <div class="row align-items-center mb-5 portfolio-item">
+      <div class="col-md-6">
+        <div class="js-fullheight project-img" style="background-image: url('images/nm1.jpg');">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="text fade-in">
+          <div class="desc">
+            <span class="subheading">1st project {12/06/2019}</span>
+            <h2 class="mb-4"><a href="single.html">Project Nume</a></h2>
+            <p>Nme Professional Salon — where beauty meets expertise. We specialize in premium makeup, skincare, and hair treatments, offering personalized services that bring out your best look with a touch of luxury and care.</p>
+            <a href="https://nume.securadev.com/" class="custom-btn">Dive in</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECOND PROJECT (Text Left, Image Right) -->
+    <div class="row align-items-center portfolio-item">
+      <div class="col-md-6 order-md-2">
+        <div class="img js-fullheight project-img" style="background-image: url('images/sec.jpg');">
+        </div>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <div class="text fade-in">
+          <div class="desc">
+            <span class="subheading">Secura {12/06/2019}</span>
+            <h2 class="mb-4"><a href="single.html">Project Securadev</a></h2>
+            <p>At SECURADEV, we secure the web — protecting data, defending networks, and empowering businesses with cutting-edge cybersecurity solutions.</p>
+            <a href="https://www.securadev.com/" class="custom-btn">Dive in</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
 
     <footer class="ftco-footer ftco-section">
       <div class="container">
@@ -223,7 +190,7 @@
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">About Us</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <p>I craft innovative web solutions with the MEAN stack — where creativity meets precision and every project transforms ideas into seamless digital experiences.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -254,12 +221,12 @@
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<h2 class="ftco-heading-2">Contact Info</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203. Mountain View,,kelowana(B.c),Canada</span></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text">810.,Kelowna(B.c),Canada</span></li>
 	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+1 548-333-6501</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">longianavdeep@gmail.com</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">deeplongia0002@gmail.com</span></a></li>
 	              </ul>
 	            </div>
             </div>
@@ -269,7 +236,7 @@
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Securadev</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
